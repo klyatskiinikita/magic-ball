@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(2,0,36,1) 100%);
+}
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+#ball {
+    content: "";
+    display: block;
+    padding: 50%;
+    position: relative;
+    background: radial-gradient(circle at 65% 15%, white 1px, #696969 3%, black 60%, #696969 100%); 
+    border-radius: 50%;   
+}
+
+#ball-container {
+    margin: 0 auto;
+    width: 30%;
+}
+
+#output {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    transform: translate(-50%, -50%);
+    color: #F0F8FF;
+    font-size: 1.4rem;
+    border-radius: 5%;
+}
+
+#ball::before {
+    content: "";
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border-radius: 50%;
+}
+
+#question {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+    text-align: center;
+    width: 50%; 
+}
+
+#question > * {
+    padding: 2%;
+    border: 1px solid #337fed;
+    cursor: pointer;
+    font-weight:bold;
+    font-size: 1.2rem;
+}
+
+#calculate-button {
+    background-color: #3d94f6;
+    color: #fff;
+    width: 100%;
+    height: 50%;
+}
+
+#input {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    height: 50%;
+}
+
+@media(max-width: 992px) {
+    #ball-container {
+        width: 70%;
+    }
+    #question {
+        width: 70%;
+    }
+} 
+
+@media(max-width: 600px) {
+    #ball-container {
+        width: 95%;
+    }
+} 
